@@ -33,7 +33,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* font-family: WorkSans-Regular; */
+  font-family: WorkSans-Regular;
 }
 html,
 body {
@@ -48,11 +48,7 @@ div {
   height: 100%;
   display: flex;
 }
-.right {
-  width: 45%;
-  height: 100%;
-  background-color: #fff;
-}
+
 .left {
   width: 55%;
   height: 100%;
@@ -66,6 +62,7 @@ div {
 .left svg {
   width: 6rem;
   height: 6rem;
+  z-index: 100;
 }
 .radar {
   height: 0;
@@ -86,7 +83,7 @@ div {
   );
   top: 50%;
   left: 50%;
-  border-radius: 0  0 100%  0;
+  border-radius: 0 0 100% 0;
   animation: scanning 8s linear infinite;
   transform-origin: 0% 0%;
 }
@@ -101,7 +98,11 @@ div {
   align-items: center;
   font-family: WorkSans-SemiBold;
   color: white;
-  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.418);
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.618);
+}
+.logo p {
+  z-index: 100;
+  font-family: WorkSans-SemiBold;
 }
 .circle {
   width: 0;
@@ -135,4 +136,74 @@ div {
     height: 40rem;
     opacity: 0;
   }
+}
+
+.right {
+  width: 45%;
+  height: 100%;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+input {
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.right-box {
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+i {
+  color: #aaa;
+}
+.input-user {
+  border-bottom: 1px solid #aaa;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.input-pass {
+  border-bottom: 1px solid #aaa;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.input-captcha {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.pic {
+  margin: 1rem 0;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.code {
+  border-bottom: 1px solid #aaa;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+.input-submit {
+  width: 100%;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(23, 59, 218);
+  border-radius: 5px;
+  color: white;
+}
+:is(.code, .input-user, .input-pass) input {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+input::placeholder {
+  text-align: end;
 }
