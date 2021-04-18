@@ -1,0 +1,108 @@
+/*Start Font Section */
+@font-face {
+  font-family: WorkSans-Thin;
+  src: url(./Work_Sans_font/static/WorkSans-Thin.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: WorkSans-Light;
+  src: url(./Work_Sans_font/static/WorkSans-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: WorkSans-Medium;
+  src: url(./Work_Sans_font/static/WorkSans-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: WorkSans-Regular;
+  src: url(./Work_Sans_font/static/WorkSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: WorkSans-SemiBold;
+  src: url(./Work_Sans_font/static/WorkSans-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: WorkSans-Bold;
+  src: url(./Work_Sans_font/static/WorkSans-Bold.ttf) format("truetype");
+}
+/*End Font Section */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family: WorkSans-Regular; */
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+div {
+  display: flex;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.right {
+  width: 45%;
+  height: 100%;
+  background-color: #fff;
+}
+.left {
+  width: 55%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(30deg, #29bbe9, #98eed8);
+}
+
+.left svg {
+  width: 6rem;
+  height: 6rem;
+}
+.logo {
+  flex-direction: column;
+  align-items: center;
+  font-family: WorkSans-SemiBold;
+  color: white;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.418);
+}
+.circle {
+  width:0;
+  height: 0;
+  border-radius: 50%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.507);
+  animation: circle 5s infinite;
+}
+.n1 {
+  animation-delay: 0.5s;
+}
+.n2 {
+  animation-delay: 1s;
+}
+.n3 {
+  animation-delay: 1.5s;
+}
+.n4 {
+  animation-delay: 2s;
+}
+
+@keyframes circle {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  to {
+    width: 40rem;
+    height: 40rem;
+    opacity: 0;
+  }
+}
