@@ -28,12 +28,40 @@
   font-family: WorkSans-Bold;
   src: url(./Work_Sans_font/static/WorkSans-Bold.ttf) format("truetype");
 }
+@font-face {
+  font-family: Vazir;
+  src: url("Vazir-Regular.eot");
+  src: url("Vazir-Regular.eot?#iefix") format("embedded-opentype"),
+    url("Vazir-Regular.woff2") format("woff2"),
+    url("Vazir-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("Vazir-Medium.eot");
+  src: url("Vazir-Medium.eot?#iefix") format("embedded-opentype"),
+    url("Vazir-Medium.woff2") format("woff2"),
+    url("Vazir-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Vazir;
+  src: url("Vazir-Light.eot");
+  src: url("Vazir-Light.eot?#iefix") format("embedded-opentype"),
+    url("Vazir-Light.woff2") format("woff2"),
+    url("Vazir-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
 /*End Font Section */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: WorkSans-Regular;
+  font-family: WorkSans-Regular, Vazir;
 }
 html,
 body {
@@ -43,6 +71,7 @@ body {
 div {
   display: flex;
 }
+
 .container {
   width: 100%;
   height: 100%;
@@ -52,13 +81,20 @@ div {
 .left {
   width: 55%;
   height: 100%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   background: linear-gradient(30deg, #29bbe9, #98eed8);
   overflow: hidden;
 }
-
+.left > p{
+  position: absolute;
+  color: white;
+  font-size: 0.8rem;
+  margin: 0.5rem;
+  bottom: 0;
+}
 .left svg {
   width: 6rem;
   height: 6rem;
@@ -154,6 +190,8 @@ input {
 
 .right-box {
   width: 70%;
+  font-family: Vazir;
+  font-weight: 300;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -161,16 +199,33 @@ input {
 i {
   color: #aaa;
 }
+.right-box p:nth-child(1) {
+  font-family: Vazir;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: #333;
+  align-self: flex-end;
+}
+.right-box p:nth-child(2) {
+  font-family: Vazir;
+  font-size: 1rem;
+  color: #999;
+  margin: 1rem 0;
+  align-self: flex-end;
+}
 .input-user {
   border-bottom: 1px solid #aaa;
   justify-content: center;
   align-items: center;
+  margin: 1rem 0;
   width: 100%;
 }
 .input-pass {
   border-bottom: 1px solid #aaa;
   justify-content: center;
   align-items: center;
+  margin: 1rem 0;
   width: 100%;
 }
 .input-captcha {
@@ -178,12 +233,20 @@ i {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin: 1rem 0;
 }
 .pic {
   margin: 1rem 0;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+.pic i{
+  margin:0 1rem 0 0 ;
+  cursor: pointer;
+}
+.pic h2{
+  color: #444;
 }
 .code {
   border-bottom: 1px solid #aaa;
@@ -194,16 +257,35 @@ i {
 .input-submit {
   width: 100%;
   padding: 0.5rem;
+  margin: 1rem 0;
   justify-content: center;
   align-items: center;
-  background-color: rgb(23, 59, 218);
+  background-color: #0092e9;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
 }
 :is(.code, .input-user, .input-pass) input {
-  padding: 0.5rem;
-  margin: 0.5rem;
+  padding: 0.1rem;
+  margin: 0.8rem;
 }
 input::placeholder {
   text-align: end;
+}
+.remmember{
+  width: 100%;
+  font-size: 0.8rem;
+  color: #aaa;
+font-weight: 500;
+  justify-content: flex-end;
+  align-items: center;
+}
+.remmember input{
+  width: auto;
+  margin: 0 0 0 .2rem;
+}
+.login{
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
